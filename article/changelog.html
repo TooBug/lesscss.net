@@ -16,7 +16,29 @@
       </div>
     </section>
     <section id="docs" class="page page-light">
-      <div class="content"><h2>1.4.2（2013-07-20）</h2>
+      <div class="content"><h2>1.5.0 Beta 1（2013-09-01）</h2>
+
+<ul>
+<li>支持sourcemap</li>
+<li>支持使用内联语句将CSS内容引入但不用LESS处理，例如<code>@import (inline) "file.css";</code></li>
+<li>更好地支持<code>modifyVars</code>（使用新的变量值来刷新页面样式）</li>
+<li>支持使用<code>reference</code>选项来引入外部样式，但外部样式不会被输出，只有调用混合或者是使用<code>extend</code>继承才会输出</li>
+<li>支持在选择器上使用guard表达式（现在仅支持单个选择器）</li>
+<li>添加<code>min</code>/<code>max</code>函数</li>
+<li>修复命名空间中操作符之间空格问题</li>
+<li>压缩时保留以感叹号开头的注释</li>
+<li>在<code>toCSS</code>中不再抛出异常，而是始终返回一个错误对象</li>
+<li>允许使用<code>+:</code>语法合并属性</li>
+<li>修复使用CSS语法传递<code>saturate</code>函数时的bug</li>
+<li>添加<code>svg-gradient</code>函数</li>
+<li>在lessc中添加<code>no-js</code>选择（在浏览器中，使用<code>javascriptEnabled: false</code>），用于禁止在LESS文件中使用JavaScript</li>
+<li>将cssmin换成了clean-css</li>
+<li>浏览器端：添加<code>logLevel</code>选项控制日志（2 = 所有日志, 1 = 只显示错误, 0 = 不显示日志）</li>
+<li>浏览器端：添加<code>errorReporting</code>选项，值可以为<code>"html"</code>（默认）或者<code>"console"</code>或者一个函数</li>
+<li>有关media query和extend的bug修复</li>
+</ul>
+
+<h2>1.4.2（2013-07-20）</h2>
 
 <ul>
 <li>如果不传入“严格运算模式”参数，<code>font-size</code>/<code>line-height</code>又可以正确计算了</li>
